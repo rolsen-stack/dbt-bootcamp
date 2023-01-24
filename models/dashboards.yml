@@ -1,0 +1,16 @@
+version: 2
+
+exposures:
+  - name: Sentiment Reviews Dashboard
+    type: dashboard
+    maturity: low
+    url: https://b674e1c1.us1a.app.preset.io/superset/dashboard/8/?native_filters_key=w0e7QMQgfBnBmXN-TrAUKMG1E1lSXgzCylmpe6vcCZoZ6GFX4D6tZX94RxyZeWPr
+    description: Simple dashboard for visualizing Airbnb review sentiment
+
+    depends_on:
+      - ref('dim_listings_w_hosts')
+      - ref('mart_fullmoon_reviews')
+
+    owner:
+      name: Rutger Olsen
+      email: olsenrutger@gmail.com
